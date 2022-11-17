@@ -1,0 +1,70 @@
+form {
+    position: relative;
+    width: 440px;
+    margin: 0 auto;
+    padding: 20px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    background: white;
+  }
+  form input,
+  form textarea {
+    background: white;
+    display: block;
+    margin: 15px auto;
+    width: 100%;
+    border: rgba(68, 68, 68, 0.8) 1px solid;
+    padding: 15px;
+    border-radius: 10px;
+    font-family: poppins;
+  }
+  .error{
+    color: red;
+    font-size: 12px;
+    font-weight: 500;
+    margin-top: -10px;
+    margin-left: 10px;
+  }
+  input.ng-invalid.ng-touched{
+    border-color:red;
+  }
+  
+  form input {
+    height: 40px;
+    line-height: 40px;
+    outline: 0;
+    font-size: 1rem;
+    color: #000;
+  }
+  ::placeholder{
+    color: rgba(68, 68, 68, 0.523);
+  }
+  form textarea {
+    resize: none;
+    outline: none;
+    font-size: 1rem;
+    color: rgba(68, 68, 68, 0.8);
+  }
+  form button {
+    position: absolute;
+    display: block;
+    height: 40px;
+    width: 250px;
+    left: 95px;
+    border: 0;
+    border-radius: 10px;
+    bottom: -20px;
+    background: #04232c;
+    color: white;
+    font-size: 1.1rem;
+    font-weight: 300;
+    outline: none;
+    cursor: pointer;
+    font-family: poppins;
+  
+  }
+  button:disabled {
+    opacity: 0.8;
+  }
+  
+  
+  

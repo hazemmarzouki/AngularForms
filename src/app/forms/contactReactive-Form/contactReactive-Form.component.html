@@ -1,0 +1,40 @@
+<form [formGroup]="FormData" 
+      (ngSubmit)="onSubmit(FormData.value)">
+
+  <div class="form-group">
+    <input type="text" 
+           class="form-control" 
+           placeholder="Enter Name" 
+           formControlName="FullName">
+  </div>
+
+  <div class="form-group">
+  <input type="email" 
+         class="form-control"
+         name="Email" aria-describedby="emailHelp" 
+         placeholder="Enter email"
+         formControlName="Email">
+  </div>
+  
+    <div class="form-group">
+      <input type="text" 
+            class="form-control" 
+            placeholder="Enter Phone" 
+            formControlName="Phone">
+    </div>
+  
+    <div class="form-group">
+      <textarea class="form-control" 
+                rows="3" 
+                placeholder="Enter Message" 
+                formControlName="Message"></textarea>
+    </div>
+  
+    <button type="submit" 
+            class="btn " 
+            [disabled]="!FormData.valid">
+            <i class="fa fa-paper-plane" aria-hidden="true"></i>
+            Send</button>
+              
+
+</form>
