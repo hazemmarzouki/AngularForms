@@ -7,14 +7,13 @@ import { NgForm } from '@angular/forms';
   styleUrls: ['./templateDriven-Form.component.css'],
 })
 export class TemplateDrivenFormComponent implements OnInit {
-  user = { fname: 'Hazem', lname: 'Marzouki' };
+
   constructor() {}
 
   ngOnInit() {}
 
   onSubmit(form: NgForm) {
-
-    console.log('Modal Value:',this.user);
-    console.log(' **** form value:', form.value);
+    const msg = `${form.value.name} Has Submitted Successfully!`;
+    alert(msg);
   }
 }

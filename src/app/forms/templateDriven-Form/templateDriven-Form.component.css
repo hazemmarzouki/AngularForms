@@ -10,13 +10,24 @@ form input,
 form textarea {
   background: white;
   display: block;
-  margin: 25px auto;
+  margin: 15px auto;
   width: 100%;
   border: rgba(68, 68, 68, 0.8) 1px solid;
   padding: 15px;
   border-radius: 10px;
   font-family: poppins;
 }
+.error{
+  color: red;
+  font-size: 12px;
+  font-weight: 500;
+  margin-top: -10px;
+  margin-left: 10px;
+}
+input.ng-invalid.ng-touched{
+  border-color:red;
+}
+
 form input {
   height: 40px;
   line-height: 40px;
@@ -48,8 +59,11 @@ form button {
   font-weight: 300;
   outline: none;
   cursor: pointer;
+  font-family: poppins;
+
 }
-form button:hover {
-  background: #0a4a5a;
+button:disabled {
+  opacity: 0.8;
 }
+
 

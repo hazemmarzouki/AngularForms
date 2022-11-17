@@ -1,21 +1,31 @@
-  <form (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm" >  <!-- #myForm is local referance variable -->
+<form (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm">
+  <!-- #myForm is local referance variable -->
+  <input placeholder="Name" type="text" name="name"
+   ngModel #name="ngModel" required minlength="2" />
+  <p class="error" *ngIf="name.invalid && name.touched">
+    * Please Enter a Valid Name !
+  </p>
 
-    <input placeholder="Name" type="text" name="name" 
-    ngModel [ngModel]="user.fname"/>
+  <input placeholder="Lastname" type="Lastname" name="lastname" 
+  ngModel #lastname="ngModel" required minlength="3" />
+  <p class="error" *ngIf="lastname.invalid && lastname.touched">
+    * Please Enter a Valid Lastname !
+  </p>
 
-    <input placeholder="Lastname" type="Lastname" name="lastname" 
-    ngModel [ngModel]="user.lname"/>
+  <input placeholder="phone" type="phone" name="phone" ngModel />
 
-    <input placeholder="phone" type="phone" name="phone"
-     ngModel />
+  <input placeholder="Email" type="email" name="email"
+   ngModel #email="ngModel" required email />
 
-    <input placeholder="Email" type="email" name="email"
-     ngModel/>
-    
-    <textarea
-      placeholder="Tell us about your project..." rows="3" name="project" ngModel>
+  <p class="error" *ngIf="email.invalid && email.touched">
+    * Please Enter a Valid Email Address !
+  </p>
+
+  <textarea placeholder="Tell us about your project..." rows="3" name="project" ngModel>
     </textarea>
-    
-    <button type="submit">Submit</button>
-    </form>
-    
+
+  <button type="submit" [disabled]="contactForm.invalid">
+    <i class="fa fa-paper-plane" aria-hidden="true"></i>
+    Send</button>
+
+</form>
