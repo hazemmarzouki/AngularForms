@@ -86,7 +86,7 @@
 }
 .address h3, .email h3, .phone h3 {
   font-size: 1rem;
-  font-weight: 300;
+  font-weight: 400;
 }
 .address i, .email i, .phone i {
   color: #2596be;
@@ -123,11 +123,11 @@
 }
 
 .phone {
-  grid-area: phone;
+  grid-area:email;
 }
 
 .email {
-  grid-area: email;
+  grid-area: phone;
 }
 
 .contact-form {
