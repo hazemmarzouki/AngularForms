@@ -20,9 +20,13 @@ export class ContactReactiveFormComponent implements OnInit {
       Email: new FormControl('' , [Validators.required, Validators.email]),
       Phone : new FormControl('' , [Validators.required, Validators.minLength(8)]),
       Message: new FormControl('' , [Validators.required]),
-
+     
   }
     );}
+
+    get f(){
+      return this.FormData.controls;
+    }
 
     onSubmit(FormData:any) {
       console.log(FormData)
@@ -34,4 +38,7 @@ export class ContactReactiveFormComponent implements OnInit {
       console.warn(error.responseText)
       console.log({ error })
       })
-}}
+}
+
+
+}
