@@ -8,14 +8,12 @@
            formControlName="FullName"
            id="name">
            
-           <div *ngIf="f.name.touched && f.name.invalid" class="alert alert-danger">
-            <div *ngIf="f.name.errors.required">Name is required.</div>
-            <div *ngIf="f.name.errors.minlength">Name should be 3 character.</div>
-        </div>
+    <p class="error"
+          *ngIf="FormData.controls.FullName.dirty && FormData.controls.FullName.errors">
+      *Please enter a valid name
+  </p> 
   </div>
 
-
-  
   <div class="form-group">
   <input 
          class="form-control"
@@ -23,6 +21,10 @@
          placeholder="Enter email"
          formControlName="Email">
   </div>
+  <p class="error"
+  *ngIf="FormData.controls.Email.dirty && FormData.controls.Email.errors ">
+*Please enter a valid email Address
+</p>
   
     <div class="form-group">
       <input type="text" 
@@ -30,12 +32,18 @@
             placeholder="Enter Phone" 
             formControlName="Phone">
     </div>
+    <p class="error"
+    *ngIf="FormData.controls.Phone.dirty && FormData.controls.Phone.errors">
+*Please enter a valid phone number (8 Digits)
+</p>
   
     <div class="form-group">
       <textarea class="form-control" 
                 rows="3" 
                 placeholder="Enter Message" 
-                formControlName="Message"></textarea>
+                formControlName="Message">
+              </textarea>
+              
     </div>
   
     <button type="submit" 
